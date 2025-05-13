@@ -10,9 +10,12 @@ class Vehicle { //created a Vehicle class
     }
     //Task 2: Add Methods
     getDrive(newMilesDriven = 0) { //this method updates the miles driven by adding them to the original miles entered
-        this.mileage = this.mileage + newMilesDriven;
+        if (newMilesDriven >= 0) {
+            this.mileage = this.mileage + newMilesDriven;
         //return `The new miles on your ${this.type} ${this.make} ${this.model} are: ${updatedMiles}`;
-
+        } else {
+            console.log("Please enter a valid number! ")
+        }
     } 
     getDetails() {
         return `The ${this.type} you have entered is a ${this.make} ${this.model} from ${this.year} and has ${this.mileage} miles.`;
@@ -23,7 +26,7 @@ class Vehicle { //created a Vehicle class
 //Task 3: Create and Use Vehicle Objects
 
 let myCar = new Vehicle("car", "Ford", "Ecosport", 2020, 48000);
-myCar.getDrive(-1000);
+myCar.getDrive(1000);
 console.log(myCar.getDetails());
 
 let myTruck = new Vehicle("truck", "Ford", "F-150", 2023, 36000);
