@@ -23,7 +23,7 @@ class Vehicle { //created a Vehicle class
 //Task 3: Create and Use Vehicle Objects
 
 let myCar = new Vehicle("car", "Ford", "Ecosport", 2020, 48000);
-myCar.getDrive(1000);
+myCar.getDrive(-1000);
 console.log(myCar.getDetails());
 
 let myTruck = new Vehicle("truck", "Ford", "F-150", 2023, 36000);
